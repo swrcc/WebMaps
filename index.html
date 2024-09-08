@@ -1,18 +1,51 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <style>
+      .split {
+        height: 100%;
+        width: 50%;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        overflow-x: hidden;
+        padding-top: 20px;
+      }
+      .left {
+        left: 0;
+        background-color: #111;
+      }
+      .right {
+        right: 0;
+        background-color: red;
+      }
+    </style>
   </head>
+  
   <body>
-    <h1>Hello</h1>
-    <p>DAY 1 SPC</p>
-    <a href="https://www.spc.noaa.gov/partners/outlooks/state/images/NY_swody1.png">
-    <img src="https://www.spc.noaa.gov/partners/outlooks/state/images/NY_swody1.png"></img></a>
-    <p>DAY 2 SPC</p>
-    <a href="https://www.spc.noaa.gov/partners/outlooks/state/images/NY_swody2.png">
-    <img src="https://www.spc.noaa.gov/partners/outlooks/state/images/NY_swody2.png"></img></a>
-    <p>DAY 3 SPC</p>
-    <a href="https://www.spc.noaa.gov/partners/outlooks/state/images/NY_swody3.png">
-    <img src="https://www.spc.noaa.gov/partners/outlooks/state/images/NY_swody3.png"></img></a>
+    <h1>SPC & WPC Maps for NYS</h1>
+    <div class="split left">
+      <p>DAY 1 SPC Convective Outlook</p>
+      <a href="https://www.spc.noaa.gov/partners/outlooks/state/images/NY_swody1.png">
+      <img src="https://www.spc.noaa.gov/partners/outlooks/state/images/NY_swody1.png"></img></a>
+      <p>DAY 2 SPC Convective Outlook</p>
+      <a href="https://www.spc.noaa.gov/partners/outlooks/state/images/NY_swody2.png">
+      <img src="https://www.spc.noaa.gov/partners/outlooks/state/images/NY_swody2.png"></img></a>
+      <p>DAY 3 SPC Convective Outlook</p>
+      <a href="https://www.spc.noaa.gov/partners/outlooks/state/images/NY_swody3.png">
+      <img src="https://www.spc.noaa.gov/partners/outlooks/state/images/NY_swody3.png"></img></a>
+    </div>
+    <div class="split right">
+       <p>DAY 1 WPC Excessive Rainfall Outlook</p>
+        <a href="https://www.wpc.ncep.noaa.gov/exper/eromap/statemaps/NY_Day1.png">
+        <img src="https://www.wpc.ncep.noaa.gov/exper/eromap/statemaps/NY_Day1.png"></img></a>
+        <p>DAY 2 WPC Excessive Rainfall Outlook</p>
+        <a href="https://www.wpc.ncep.noaa.gov/exper/eromap/statemaps/NY_Day2.png">
+        <img src="https://www.wpc.ncep.noaa.gov/exper/eromap/statemaps/NY_Day2.png"></img></a>
+        <p>DAY 3 WPC Excessive Rainfall Outlook</p>
+        <a href="https://www.wpc.ncep.noaa.gov/exper/eromap/statemaps/NY_Day3.png.png">
+        <img src="https://www.wpc.ncep.noaa.gov/exper/eromap/statemaps/NY_Day3.png"></img></a>
+    </div>
       
   </body>
 </html>
