@@ -1,51 +1,401 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPC & ERO Outlooks</title>
     <style>
-      .split {
-        height: 100%;
-        width: 50%;
-        position: fixed;
-        z-index: 1;
-        top: 0;
-        overflow-x: hidden;
-        padding-top: 20px;
-      }
-      .left {
-        left: 0;
-        background-color: #111;
-      }
-      .right {
-        right: 0;
-        background-color: red;
-      }
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        .left {
+            flex-basis: 48%;
+            background-color:lightgoldenrodyellow
+        }
+
+        .right {
+            flex-basis: 48%;
+            background-color: lightgreen;
+            text-align: center;
+        }
+
+        .left img, .right img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .small-images {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+
+        .image-wrapper {
+            flex-basis: 32%;
+            text-align: center;
+        }
+
+        .image-wrapper img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+
+        section {
+            background-color: lightgray;
+            text-align: center;
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            width: 100%;
+        }
+
+        .container {
+            max-width: 100%;
+        }
+
+        .image-title {
+            margin-bottom: 5px;
+            font-weight: bold;
+            text-align: center;
+        }
     </style>
-  </head>
-  
-  <body>
-    <h1>SPC & WPC Maps for NYS</h1>
-    <div class="split left">
-      <p>DAY 1 SPC Convective Outlook</p>
-      <a href="https://www.spc.noaa.gov/partners/outlooks/state/images/NY_swody1.png">
-      <img src="https://www.spc.noaa.gov/partners/outlooks/state/images/NY_swody1.png"></img></a>
-      <p>DAY 2 SPC Convective Outlook</p>
-      <a href="https://www.spc.noaa.gov/partners/outlooks/state/images/NY_swody2.png">
-      <img src="https://www.spc.noaa.gov/partners/outlooks/state/images/NY_swody2.png"></img></a>
-      <p>DAY 3 SPC Convective Outlook</p>
-      <a href="https://www.spc.noaa.gov/partners/outlooks/state/images/NY_swody3.png">
-      <img src="https://www.spc.noaa.gov/partners/outlooks/state/images/NY_swody3.png"></img></a>
+</head>
+<body>
+    
+    <section>Day 1 Outlooks</section>
+
+    <div class="container">
+
+        <div class="left">
+            <a href="https://www.spc.noaa.gov/products/outlook/day1otlk.html">
+            <p class="image-title">Day 1 -  SPC Convective Outlook</p>
+            </a>
+            
+            <a href="https://www.spc.noaa.gov/partners/outlooks/state/images/NY_swody1.png">
+            <img src="https://www.spc.noaa.gov/partners/outlooks/state/images/NY_swody1.png" alt="Left Image">
+            </a>
+
+            <div class="small-images">
+                <div class="image-wrapper">
+                    <p class="image-title">Day 1 - Hail Risk</p>
+                    <a href="https://www.spc.noaa.gov/partners/outlooks/state/images/NY_swody1_HAIL.png">
+                    <img src="https://www.spc.noaa.gov/partners/outlooks/state/images/NY_swody1_HAIL.png" alt="Small Image 1">
+                    </a>
+                </div>
+                <div class="image-wrapper">
+                    <p class="image-title">Day 1 - Wind Risk</p>
+                    <a href="https://www.spc.noaa.gov/partners/outlooks/state/images/NY_swody1_WIND.png">
+                    <img src="https://www.spc.noaa.gov/partners/outlooks/state/images/NY_swody1_WIND.png" alt="Small Image 2">
+                    </a>
+                </div>
+                <div class="image-wrapper">
+                    <p class="image-title">Day 1 - Tornado Risk</p>
+                    <a href="https://www.spc.noaa.gov/partners/outlooks/state/images/NY_swody1_TORN.png">
+                    <img src="https://www.spc.noaa.gov/partners/outlooks/state/images/NY_swody1_TORN.png" alt="Small Image 3">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="right">
+            <a href="https://www.wpc.ncep.noaa.gov/qpf/excessive_rainfall_outlook_ero.php">
+            <p class="image-title">Day 1 - WPC Excessive Rainfall Outlook</p>
+            </a>
+
+            <a href="https://www.wpc.ncep.noaa.gov/exper/eromap/statemaps/NY_Day1.png">
+            <img src="https://www.wpc.ncep.noaa.gov/exper/eromap/statemaps/NY_Day1.png" alt="Right Image">
+            </a>
+        </div>
     </div>
-    <div class="split right">
-       <p>DAY 1 WPC Excessive Rainfall Outlook</p>
-        <a href="https://www.wpc.ncep.noaa.gov/exper/eromap/statemaps/NY_Day1.png">
-        <img src="https://www.wpc.ncep.noaa.gov/exper/eromap/statemaps/NY_Day1.png"></img></a>
-        <p>DAY 2 WPC Excessive Rainfall Outlook</p>
-        <a href="https://www.wpc.ncep.noaa.gov/exper/eromap/statemaps/NY_Day2.png">
-        <img src="https://www.wpc.ncep.noaa.gov/exper/eromap/statemaps/NY_Day2.png"></img></a>
-        <p>DAY 3 WPC Excessive Rainfall Outlook</p>
-        <a href="https://www.wpc.ncep.noaa.gov/exper/eromap/statemaps/NY_Day3.png.png">
-        <img src="https://www.wpc.ncep.noaa.gov/exper/eromap/statemaps/NY_Day3.png"></img></a>
+
+    <section>Day 2 Outlooks</section>
+
+    <div class="container">
+        
+        <div class="left">
+            <a href="https://www.spc.noaa.gov/products/outlook/day2otlk.html">
+            <p class="image-title">Day 2 -  SPC Convective Outlook</p>
+            </a>
+
+            <a href="https://www.spc.noaa.gov/partners/outlooks/state/images/NY_swody2.png">
+            <img src="https://www.spc.noaa.gov/partners/outlooks/state/images/NY_swody2.png" alt="Left Image">
+            </a>
+
+            <div class="small-images">
+                <div class="image-wrapper">
+                    <p class="image-title">Day 2 - Hail Risk</p>
+                    <a href="https://www.spc.noaa.gov/partners/outlooks/state/images/NY_swody2_HAIL.png">
+                    <img src="https://www.spc.noaa.gov/partners/outlooks/state/images/NY_swody2_HAIL.png" alt="Small Image 1">
+                    </a>
+                </div>
+                <div class="image-wrapper">
+                    <p class="image-title">Day 2 - Wind Risk</p>
+                    <a href="https://www.spc.noaa.gov/partners/outlooks/state/images/NY_swody1_WIND.png">
+                    <img src="https://www.spc.noaa.gov/partners/outlooks/state/images/NY_swody2_WIND.png" alt="Small Image 2">
+                    </a>
+                </div>
+                <div class="image-wrapper">
+                    <p class="image-title">Day 2 - Tornado Risk</p>
+                    <a href="https://www.spc.noaa.gov/partners/outlooks/state/images/NY_swody2_TORN.png">
+                    <img src="https://www.spc.noaa.gov/partners/outlooks/state/images/NY_swody2_TORN.png" alt="Small Image 3">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="right">
+            <a href="https://www.wpc.ncep.noaa.gov/qpf/excessive_rainfall_outlook_ero.php">
+            <p class="image-title">Day 2 - WPC Excessive Rainfall Outlook</p>
+            </a>
+
+            <a href="https://www.wpc.ncep.noaa.gov/exper/eromap/statemaps/NY_Day2.png">
+            <img src="https://www.wpc.ncep.noaa.gov/exper/eromap/statemaps/NY_Day2.png" alt="Right Image">
+            </a>
+        </div>
     </div>
-      
-  </body>
+
+    <section>Day 3 Outlooks</section>
+
+    <div class="container">
+        
+        <div class="left">
+            <a href="https://www.spc.noaa.gov/products/outlook/day3otlk.html">
+            <p class="image-title">Day 3 -  SPC Convective Outlook</p>
+            </a>
+
+            <a href="https://www.spc.noaa.gov/partners/outlooks/state/images/NY_swody3.png">
+            <img src="https://www.spc.noaa.gov/partners/outlooks/state/images/NY_swody3.png" alt="Left Image">
+            </a>
+
+
+            <div class="small-images">
+                <div class="image-wrapper">
+                    <p class="image-title">Day 3 - Hail Risk</p>
+                    <p>[Out of range]</p>
+                </div>
+                <div class="image-wrapper">
+                    <p class="image-title">Day 3 - Wind Risk</p>
+                    <p>[Out of range]</p>
+                </div>
+                <div class="image-wrapper">
+                    <p class="image-title">Day 3 - Tornado Risk</p>
+                    <p>[Out of range]</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="right">
+            <a href="https://www.wpc.ncep.noaa.gov/qpf/excessive_rainfall_outlook_ero.php">
+            <p class="image-title">Day 3 - WPC Excessive Rainfall Outlook</p>
+            </a>
+
+            <a href="https://www.wpc.ncep.noaa.gov/exper/eromap/statemaps/NY_Day3.png"> 
+            <img src="https://www.wpc.ncep.noaa.gov/exper/eromap/statemaps/NY_Day3.png" alt="Right Image">
+            </a>
+        </div>
+    </div>
+
+    <section>Day 4 Outlooks</section>
+
+    <div class="container">
+        
+        <div class="left">
+            <a href="https://www.spc.noaa.gov/products/exper/day4-8/">
+            <p class="image-title">Day 4 -  SPC Convective Outlook</p>
+            </a>
+
+            <a href="https://www.spc.noaa.gov/partners/outlooks/state/images/NY_swody4_PROB.png">
+            <img src="https://www.spc.noaa.gov/partners/outlooks/state/images/NY_swody4_PROB.png" alt="Left Image">
+            </a>
+
+
+            <div class="small-images">
+                <div class="image-wrapper">
+                    <p class="image-title">Day 4 - Hail Risk</p>
+                    <p>[Out of range]</p>
+                </div>
+                <div class="image-wrapper">
+                    <p class="image-title">Day 4 - Wind Risk</p>
+                    <p>[Out of range]</p>
+                </div>
+                <div class="image-wrapper">
+                    <p class="image-title">Day 4 - Tornado Risk</p>
+                    <p>[Out of range]</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="right">
+            <a href="https://www.wpc.ncep.noaa.gov/qpf/excessive_rainfall_outlook_ero.php">
+            <p class="image-title">Day 4 - WPC Excessive Rainfall Outlook</p>
+            </a>
+
+            <a href="https://www.wpc.ncep.noaa.gov/exper/eromap/statemaps/NY_Day4.png">
+            <img src="https://www.wpc.ncep.noaa.gov/exper/eromap/statemaps/NY_Day4.png" alt="Right Image">
+            </a>
+        </div>
+    </div>
+
+
+    <section>Day 5 Outlooks</section>
+
+    <div class="container">
+        
+        <div class="left">
+            <a href="https://www.spc.noaa.gov/products/exper/day4-8/">
+            <p class="image-title">Day 5 -  SPC Convective Outlook</p>
+            </a>
+
+            <a href="https://www.spc.noaa.gov/partners/outlooks/state/images/NY_swody5_PROB.png">
+            <img src="https://www.spc.noaa.gov/partners/outlooks/state/images/NY_swody5_PROB.png" alt="Left Image">
+            </a>
+
+
+            <div class="small-images">
+                <div class="image-wrapper">
+                    <p class="image-title">Day 5 - Hail Risk</p>
+                    <p>[Out of range]</p>
+                </div>
+                <div class="image-wrapper">
+                    <p class="image-title">Day 5 - Wind Risk</p>
+                    <p>[Out of range]</p>
+                </div>
+                <div class="image-wrapper">
+                    <p class="image-title">Day 5 - Tornado Risk</p>
+                    <p>[Out of range]</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="right">
+            <a href="https://www.wpc.ncep.noaa.gov/qpf/excessive_rainfall_outlook_ero.php">
+            <p class="image-title">Day 5 - WPC Excessive Rainfall Outlook</p>
+            </a>
+
+            <a href="https://www.wpc.ncep.noaa.gov/exper/eromap/statemaps/NY_Day5.png">
+            <img src="https://www.wpc.ncep.noaa.gov/exper/eromap/statemaps/NY_Day5.png" alt="Right Image">
+            </a>
+        </div>
+    </div>
+
+
+    <section>Day 6 Outlooks</section>
+
+    <div class="container">
+        
+        <div class="left">
+            <a href="https://www.spc.noaa.gov/products/exper/day4-8/">
+            <p class="image-title">Day 6 -  SPC Convective Outlook</p>
+            </a>
+
+            <a href="https://www.spc.noaa.gov/partners/outlooks/state/images/NY_swody6_PROB.png">
+            <img src="https://www.spc.noaa.gov/partners/outlooks/state/images/NY_swody6_PROB.png" alt="Left Image">
+            </a>
+
+
+            <div class="small-images">
+                <div class="image-wrapper">
+                    <p class="image-title">Day 6 - Hail Risk</p>
+                    <p>[Out of range]</p>
+                </div>
+                <div class="image-wrapper">
+                    <p class="image-title">Day 6 - Wind Risk</p>
+                    <p>[Out of range]</p>
+                </div>
+                <div class="image-wrapper">
+                    <p class="image-title">Day 6 - Tornado Risk</p>
+                    <p>[Out of range]</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="right">
+            <p class="image-title">Day 6 - WPC Excessive Rainfall Outlook</p>
+            <p>[Out of range]</p>
+        </div>
+    </div>
+
+    <section>Day 7 Outlooks</section>
+
+    <div class="container">
+        
+        <div class="left">
+            <a href="https://www.spc.noaa.gov/products/exper/day4-8/">
+            <p class="image-title">Day 7 -  SPC Convective Outlook</p>
+            </a>
+
+            <a href="https://www.spc.noaa.gov/partners/outlooks/state/images/NY_swody7_PROB.png">
+            <img src="https://www.spc.noaa.gov/partners/outlooks/state/images/NY_swody7_PROB.png" alt="Left Image">
+            </a>
+
+
+            <div class="small-images">
+                <div class="image-wrapper">
+                    <p class="image-title">Day 7 - Hail Risk</p>
+                    <p>[Out of range]</p>
+                </div>
+                <div class="image-wrapper">
+                    <p class="image-title">Day 7 - Wind Risk</p>
+                    <p>[Out of range]</p>
+                </div>
+                <div class="image-wrapper">
+                    <p class="image-title">Day 7 - Tornado Risk</p>
+                    <p>[Out of range]</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="right">
+            <p class="image-title">Day 7 - WPC Excessive Rainfall Outlook</p>
+            <p>[Out of range]</p>
+        </div>
+    </div>
+
+    <section>Day 8 Outlooks</section>
+
+    <div class="container">
+        
+        <div class="left">
+            <a href="https://www.spc.noaa.gov/products/exper/day4-8/">
+            <p class="image-title">Day 8 -  SPC Convective Outlook</p>
+            </a>
+
+            <a href="https://www.spc.noaa.gov/partners/outlooks/state/images/NY_swody8_PROB.png">
+            <img src="https://www.spc.noaa.gov/partners/outlooks/state/images/NY_swody8_PROB.png" alt="Left Image">
+            </a>
+
+
+            <div class="small-images">
+                <div class="image-wrapper">
+                    <p class="image-title">Day 8 - Hail Risk</p>
+                    <p>[Out of range]</p>
+                </div>
+                <div class="image-wrapper">
+                    <p class="image-title">Day 8 - Wind Risk</p>
+                    <p>[Out of range]</p>
+                </div>
+                <div class="image-wrapper">
+                    <p class="image-title">Day 8 - Tornado Risk</p>
+                    <p>[Out of range]</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="right">
+            <p class="image-title">Day 8 - WPC Excessive Rainfall Outlook</p>
+            <p>[Out of range]</p>
+        </div>
+    </div>
+
+</body>
 </html>
